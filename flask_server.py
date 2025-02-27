@@ -10,3 +10,8 @@ def movie_details(id):
     movie = movies_db.read(int(id))  
     return render_template('movie-details.html', movie=movie)  
 
+@app.route('/')
+def movie_list(): 
+    movies=movies_db.list()
+    return render_template('movie-list.html', movies=movies)
+    

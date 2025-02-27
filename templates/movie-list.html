@@ -1,0 +1,21 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <title>Movie List</title>  
+</head>  
+<body>  
+    <h1>Movie List</h1> 
+    <!--don't know if its ok with the id in the link-->
+    <ul id="movies">
+    {%for movie in movies%}
+
+    <li><a href="http://127.0.0.1:5000/movie-details/{{id}}">Details about this movie</a>
+    Title: {{ movie.title }}<br></li> 
+    
+
+    {%endfor%}
+    </ul>
+    
+</body>  
+</html>  
