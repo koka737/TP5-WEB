@@ -1,0 +1,17 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="utf-8">  
+    <title>Delete Movie</title>  
+</head>  
+<body>  
+    <h1>Delete a Movie</h1>  
+    Are you sure you want to delete "{{ movie.title }}"?  
+    <form action="/">  
+        <input type="submit" value="Cancel">  
+    </form>  
+    <form action="/delete-movie/{{ movie.id }}" method="get">  
+        <input type="submit" value="Delete">  
+    </form>  
+</body>  
+</html>  

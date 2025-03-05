@@ -1,0 +1,35 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="utf-8">  
+    <title>Edit Movie</title>  
+</head>  
+<body>  
+    <h1>Edit a Movie</h1>  
+    Are you sure you want to edit "{{ movie.title }}"?  
+    <form action="/">  
+        <input type="submit" value="Cancel">  
+    </form>  
+    <form action="/edit-movie/{{ movie.id }}" method="get"> 
+
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title" value="{{ movie.title }}" required><br>
+
+        <label for="year">Year:</label>
+        <input type="text" id="year" name="year" value="{{ movie.year }}" required><br>
+
+        <label for="year">Actors:</label>
+        <input type="text" id="actors" name="actors" value="{{ movie.actors }}" required><br>
+
+        <label for="year">Plot:</label>
+        <input type="text" id="plot" name="plot" value="{{ movie.plot }}" required><br>
+
+        <label for="year">Poster:</label>
+        <input type="text" id="poster" name="poster" value="{{ movie.poster }}" required><br>
+
+
+    
+        <input type="submit" value="Edit movie">  
+    </form>  
+</body>  
+</html>  
